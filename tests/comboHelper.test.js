@@ -5,7 +5,7 @@ const {
   higherCard,
   straightFlush,
   royalFlush,
-} = require("../helpers/matchHelper");
+} = require("../helpers/comboHelper");
 
 test("Should return true", () => {
   const isStraight = straight([2, 3, 4, 5, 6]);

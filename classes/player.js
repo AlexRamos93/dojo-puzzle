@@ -1,9 +1,17 @@
 const { generateCard } = require("../helpers/functions");
+const Card = require("./card");
 
 class Player {
   constructor(name) {
     this.name = name;
     this.hand = [];
+  }
+
+  // SETS A SPECIFIED HAND (FOR TESTING PURPOSES)
+  setHand(hand) {
+    for (let i = 0; i < hand.length; i++) {
+      this.hand.push(new Card(hand[i].value, hand[i].suit));
+    }
   }
 
   // GENERATES 5 RANDOM CARDS

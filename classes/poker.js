@@ -5,7 +5,7 @@ const {
   higherCard,
   straightFlush,
   royalFlush,
-} = require("../helpers/matchHelper");
+} = require("../helpers/comboHelper");
 
 class Poker {
   constructor(player1, player2) {
