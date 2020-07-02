@@ -25,11 +25,14 @@ class Poker {
       this.player2.convertHandSuits()
     );
 
+    // IF A PLAYER DOESN`T HAVE A COMBO AND THE HAS, THAT ONE IS THE WINNER
     if (!solution1.code && solution2.code)
       return this.printWinner(this.player2, solution2, this.player1);
     if (!solution2.code && solution1.code)
       return this.printWinner(this.player1, solution1, this.player2);
 
+    // IF THE PLAYERS DOESN`T HAVE COMBOS OR THEY HAVE THE SAME COMBO
+    // THE ONE WHO HAS THE HIGHER CARD WINS
     if (
       (!solution1.code && !solution2.code) ||
       solution1.code === solution2.code
@@ -43,6 +46,7 @@ class Poker {
       else return this.printWinner(this.player2, "Higher Card", this.player1);
     }
 
+    // WHO HAS THE BETTER COMBO WINS
     if (solution1.code > solution2.code)
       return this.printWinner(this.player1, solution1, this.player2);
     if (solution2.code > solution1.code)
